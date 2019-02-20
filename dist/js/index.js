@@ -1,0 +1,1 @@
+"use strict";window.onload=function(){window.onscroll=function(){var t=document.getElementById("menu"),e=(document.getElementsByClassName("float_bar"),document.getElementsByClassName("float_active"),getid("right_nav")),n=window.scrollY;e.style.transform=600<=n?t.style.transform="scale(1)":t.style.transform="scale(0)"}};

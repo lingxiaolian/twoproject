@@ -1,0 +1,2865 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../src/css/inside_footer.css">
+    <link rel="stylesheet" href="../css/list.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+
+<body>
+    <section class="box">
+        <section class="header">
+            <section class="content">
+                <section class="left_h fl">
+                    <a href="../html/login.html">登录/注册</a>
+                    <a href="../html/cart.html">
+                        <span class="Img"></span> 购物袋
+                        <span style="color: chocolate" id="gouwu1">0</span> 件</a>
+                    <script>
+                        var gouwu = document.getElementById('gouwu1');
+                        var url = '../src/api/cartlist.php';
+                        //传两个参数进去，参数一：页数；参数二：每页显示多少条
+                        var data = 'qty=';//键值对的形式
+                        ajax('get', url, data, function (str) {
+                            console.log(str);
+                            var arr = JSON.parse(str);
+                            console.log(arr);
+                            gouwu.innerHTML = arr.total;
+                        });
+                    </script>
+                    <a href="">我的走秀
+                        <span class="Img1"></span>
+                    </a>
+                </section>
+                <section class="center_h fl">
+                    <section class="top_h">
+
+                    </section>
+                    <ul class="body_h">
+                        <li>
+                            <a href="" class="active">首页</a>
+                        </li>
+                        <li>
+                            <a href="">新品</a>
+                        </li>
+                        <li>
+                            <a href="">男士</a>
+                        </li>
+                        <li>
+                            <a href="">女士</a>
+                        </li>
+                        <li>
+                            <a href="">品牌</a>
+                        </li>
+                        <li>
+                            <a href="">手机走秀</a>
+                        </li>
+                    </ul>
+                </section>
+                <section class="right_h fl">
+                    <section class="footer_h">
+                      
+                    </section>
+                </section>
+            </section>
+        </section>
+        <section class="header_T" id="box2">
+            <!-- <script>
+                var box2 = document.getElementById('box2');
+                window.onscroll = function () {
+                    var hetg = window.scrollY;
+                    if (hetg >= 100) {
+                        box2.style.position = 'fixed';
+                        box2.style.top = '0';
+                    } else {
+                        box2.style.position = ' relative';
+                    }
+                }
+
+            </script> -->
+            <section class="content">
+                <ul class="hea_h" id="hea_d" style="z-index: 999;">
+                    <li>
+                        <a href="" class="z1">包装</a>
+                        <section class="active1">
+                            <section class="act_left">
+                                <section class="T_left1">
+                                    <h4>女士包袋</h4>
+                                    <ul class="a1">
+                                        <li>
+                                            <a href="html/list.html" style="color: red;">手提包</a>
+                                        </li>
+                                        <li>
+                                            <a href="">水桶包</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">链条包</a>
+                                        </li>
+                                        <li>
+                                            <a href="">购物袋</a>
+                                        </li>
+                                        <li>
+                                            <a href="">单肩/斜挎包</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">提挎两用包</a>
+                                        </li>
+                                    </ul>
+                                    <ul class="a1">
+                                        <li>
+                                            <a href="">化妆包</a>
+                                        </li>
+                                        <li>
+                                            <a href="">手拿包</a>
+                                        </li>
+                                        <li>
+                                            <a href="">长款钱包</a>
+                                        </li>
+                                        <li>
+                                            <a href="">短款钱包</a>
+                                        </li>
+                                        <li>
+                                            <a href="">卡包/零钱包</a>
+                                        </li>
+                                        <li>
+                                            <a href="">双肩包</a>
+                                        </li>
+                                    </ul>
+                                </section>
+                                <section class="T_left1">
+                                    <h4>男士包袋</h4>
+                                    <ul class="a1">
+                                        <li>
+                                            <a href="">手包</a>
+                                        </li>
+                                        <li>
+                                            <a href="">洗漱包</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">提挎两用包</a>
+                                        </li>
+                                        <li>
+                                            <a href="">手提包</a>
+                                        </li>
+                                        <li>
+                                            <a href="">肩挎包</a>
+                                        </li>
+                                    </ul>
+                                    <ul class="a1">
+                                        <li>
+                                            <a href="" style="color: red;">双肩包</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="" style="color: red;">长款钱包</a>
+                                        </li>
+                                        <li>
+                                            <a href="">短款钱包</a>
+                                        </li>
+                                        <li>
+                                            <a href="">卡包/零钱包</a>
+                                        </li>
+                                        <li>
+                                            <a href="">公文包</a>
+                                        </li>
+                                    </ul>
+                                </section>
+                                <section class="T_left1">
+                                    <h4>功能箱包</h4>
+                                    <ul class="a1">
+                                        <li>
+                                            <a href="">电脑包</a>
+                                        </li>
+                                        <li>
+                                            <a href="">数码包袋</a>
+                                        </li>
+                                        <li>
+                                            <a href="">钥匙包</a>
+                                        </li>
+                                        <li>
+                                            <a href="">名片夹</a>
+                                        </li>
+                                        <li>
+                                            <a href="">证件夹/套</a>
+                                        </li>
+                                        <li>
+                                            <a href="">腰包</a>
+                                        </li>
+                                    </ul>
+                                </section>
+
+                                <h4>旅行箱包</h4>
+                                <ul class="a1">
+                                    <li>
+                                        <a href="">登机箱</a>
+                                    </li>
+                                    <li>
+                                        <a href="">旅行包</a>
+                                    </li>
+                                    <li>
+                                        <a href="">托运行李箱</a>
+                                    </li>
+                                </ul>
+                            </section>
+                            <section class="act_right">
+                                <h4>热门品牌</h4>
+                                <ul class="a3">
+                                    <li>
+                                        <a href="" style="color: red;">Gucci</a>
+                                    </li>
+                                    <li>
+                                        <a href="" style="color: red;">Burberry</a>
+                                    </li>
+                                    <li>
+                                        <a href="">S.T.Dupont</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Miu Miu</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Chloe</a>
+                                    </li>
+                                    <li>
+                                        <a href="" style="color: red;">Bally</a>
+                                    </li>
+                                    <li>
+                                        <a href="">fendi</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Furla</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Longchamp</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Kenzo</a>
+                                    </li>
+                                </ul>
+                                <ul class="a4">
+                                    <li>
+                                        <a href="" style="color: red;">Prada</a>
+                                    </li>
+                                    <li>
+                                        <a href="" style="color: red;">Michael Kors</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Bottega Veneta</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Valentino</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Givenchy</a>
+                                    </li>
+                                    <li>
+                                        <a href="" style="color: red;">Saint Laurent</a>
+                                    </li>
+                                    <li>
+                                        <a href="" style="color: red;">Coach</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Tory Burch</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Aspinal of london</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Balenciaga</a>
+                                    </li>
+                                </ul>
+                            </section>
+                        </section>
+                    </li>
+                    <li>
+                        <a href="" class="z2">服装</a>
+                        <section class="active2">
+                            <section class="T_top1" style="margin-bottom: 20px; border-bottom: 1px dashed #d7d7d7;">
+                                <section class="TL">
+                                    <h4>男装</h4>
+                                    <section class="TL_R">
+                                        <section class="b4">
+                                            <h5 style="height: 80px;">上装</h5>
+                                            <span>：</span>
+
+                                            <ul class="a5">
+                                                <li>
+                                                    <a href="">T恤</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" style="color: red;">衬衫</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" style="color: red;">卫衣</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">POLO衫</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" style="color: red;">毛衣/针织衫</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">羊绒衫</a>
+                                                </li>
+                                            </ul>
+                                            <ul class="a6">
+                                                <li>
+                                                    <a href="">背心</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" style="color: red;">夹克</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">正装西服</a>
+                                                </li>
+                                            </ul>
+                                            <ul class="a6">
+                                                <li>
+                                                    <a href="">休闲西装</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" style="color: red">风衣</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">皮衣</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">大衣</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">牛仔外套</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" style="color: red">外套</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" style="color: red">棉服</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" style="color: red">羽绒服</a>
+                                                </li>
+                                            </ul>
+                                            <ul class="a7">
+                                                <li>
+                                                    <a href="">马甲</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">棒球夹克</a>
+                                                </li>
+                                            </ul>
+                                        </section>
+                                        <section class="b4">
+
+                                            <h5>下装</h5>
+                                            <span> ：</span>
+
+                                            <ul class="a7" style="margin-left: 0">
+                                                <li>
+                                                    <a href="" style="color: red">牛仔裤</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" style="color: red">休闲裤</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" style="color: red">针织运动裤</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">西裤</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">短裤</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">沙滩裤</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">皮裤</a>
+                                                </li>
+                                            </ul>
+                                        </section>
+                                        <section class="b4">
+                                            <h5>套装</h5>
+                                            <span> ：</span>
+                                            <ul class="a8" style="margin-left: 0">
+                                                <li>
+                                                    <a href="">正装套装</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">休闲套装</a>
+                                                </li>
+                                            </ul>
+                                        </section>
+                                        <section class="b4">
+                                            <h5>内衣/袜子</h5>
+                                            <span> ：</span>
+                                            <ul class="a7" style="margin-left: 0">
+                                                <li>
+                                                    <a href="">内裤</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">袜子</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">睡衣/家居服</a>
+                                                </li>
+                                            </ul>
+                                        </section>
+                                        <section class="b4">
+                                            <h5>运动户外</h5>
+                                            <span> ：</span>
+                                            <ul class="a7" style="margin-left: 0">
+                                                <li>
+                                                    <a href="">运动套装</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">运动上装</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">运动下装</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">户外装/冲锋衣</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">沙滩裤</a>
+                                                </li>
+                                            </ul>
+                                        </section>
+                                    </section>
+                                </section>
+                                <section class="TR">
+                                    <h4>热门品牌</h4>
+                                    <ul class="aa3">
+                                        <li>
+                                            <a href="" style="color: red;">Burberry</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">Prada</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">Emporio Armani</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">Fendi</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">The Kooples</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">Z Zegna</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Dior Homme</a>
+                                        </li>
+                                        <li>
+                                            <a href="">McQ</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Love Moschino</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Versace Jeans</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Marcelo Blurlon</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">Armani Jeans</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Calvin Klein Jeans</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Just Cavalli</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Neil Barrett</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Alexander McQueen</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Zegna Sport</a>
+                                        </li>
+                                    </ul>
+                                    <ul class="aa4">
+                                        <li>
+                                            <a href="" style="color: red;">Gucci</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">Kenzo</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">Versace Collection</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">Valentino</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">Sandro</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Versace</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Philipp PLein</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">Givenchy</a>
+                                        </li>
+                                        <li>
+                                            <a href="">DSquared2</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Tommy Hilfiger</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Paul&Shark</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">Armani Collezioni</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Boss</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Ermenegildo Zegna</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Giorgio Armani</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">Saint Laurent</a>
+                                        </li>
+
+
+                                    </ul>
+
+                                </section>
+                            </section>
+                            <section class="T_top2">
+                                <section class="TL">
+                                    <h4>女装</h4>
+                                    <section class="TL_R">
+                                        <section class="b4">
+                                            <h5 style="height: 80px;">上装</h5>
+                                            <span> ：</span>
+
+                                            <ul class="a5">
+                                                <li>
+                                                    <a href="">T恤</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">上衣</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" style="color: red;">衬衫</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" style="color: red;">卫衣</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">POLO衫</a>
+                                                </li>
+                                            </ul>
+                                            <ul class="a9">
+                                                <li>
+                                                    <a href="">雪纺衫</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">毛衣/针织衫</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">露肩衫</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="">吊带/背心</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">羊绒衫</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">皮衣</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">皮草</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">大衣</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" style="color: red">风衣</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" style="color: red">外套</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="">牛仔外套</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" style="color: red">西装</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="" style="color: red">羽绒服</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" style="color: red">棉服</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">马甲</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">棒球夹克</a>
+                                                </li>
+                                            </ul>
+
+                                        </section>
+                                        <section class="b4">
+
+                                            <h5 style="height: 40px;">下装</h5>
+                                            <span> ：</span>
+
+                                            <ul class="a9" style="margin-left: 0">
+                                                <li>
+                                                    <a href="" style="color: red">牛仔裤</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" style="color: red">休闲裤</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" style="color: red">针织运动裤</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="">短裤</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">正装裤</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">阔腿裤</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">喇叭裤</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">皮裤</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">打底裤</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">连身裤</a>
+                                                </li>
+                                            </ul>
+                                        </section>
+                                        <section class="b4">
+                                            <h5>裙装</h5>
+                                            <span> ：</span>
+                                            <ul class="a9" style="margin-left: 0">
+                                                <li>
+                                                    <a href="">针织连衣裙</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">连衣裙</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">半身裙</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">沙滩裙</a>
+                                                </li>
+                                            </ul>
+                                        </section>
+                                        <section class="b4">
+                                            <h5>套装</h5>
+                                            <span> ：</span>
+                                            <ul class="a8" style="margin-left: 0">
+                                                <li>
+                                                    <a href="">正装套装</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">休闲套装</a>
+                                                </li>
+                                            </ul>
+                                        </section>
+                                        <section class="b4">
+                                            <h5 style="height: 40px;">内衣/袜子</h5>
+                                            <span> ：</span>
+                                            <ul class="a9" style="margin-left: 0; width: 430px;">
+                                                <li>
+                                                    <a href="">文胸</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">内裤</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">袜子</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">睡袍/睡衣/家居服</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">塑身内衣</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">打底内衣</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">内衣套装</a>
+                                                </li>
+                                            </ul>
+                                        </section>
+                                        <section class="b4">
+                                            <h5 style="height: 40px; ">运动户外</h5>
+                                            <span> ：</span>
+                                            <ul class="a9" style="margin-left: 0;width: 430px;">
+                                                <li>
+                                                    <a href="">运动套装</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">运动上装</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">运动下装</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">户外装/冲锋衣</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">泳衣</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">运动内衣</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">沙滩装</a>
+                                                </li>
+                                            </ul>
+                                        </section>
+                                    </section>
+                                </section>
+                                <section class="TR">
+                                    <h4>热门品牌</h4>
+                                    <ul class="aa3">
+                                        <li>
+                                            <a href="" style="color: red;">Burberry</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">Kenzo</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">Weekend MaxMara</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">Tara Jarmon</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">The Kooples</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">Maje</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Philipp Plein</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Moschino</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Sportmax Code</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Saint Laurent</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Valentino</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">American E.O</a>
+                                        </li>
+                                    </ul>
+                                    <ul class="aa4">
+                                        <li>
+                                            <a href="" style="color: red;">Gucci</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">MaxMara Studio</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">Comptoir D.C</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">Sandro</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">Claudie Pierlot</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Armani Jeans</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Love Moschino</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">MaxMara</a>
+                                        </li>
+                                        <li>
+                                            <a href="">MSGM</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Prada</a>
+                                        </li>
+                                        <li>
+                                            <a href="">True Religion</a>
+                                        </li>
+
+                                    </ul>
+                                </section>
+                            </section>
+                        </section>
+                    </li>
+                    <li>
+                        <a href="" class="z3">鞋靴</a>
+                        <section class="active3">
+                            <section class="act_left">
+                                <section class="T_left1">
+                                    <h4>女鞋</h4>
+                                    <ul class="a1">
+                                        <li>
+                                            <a href="" style="color: red;">平跟鞋</a>
+                                        </li>
+                                        <li>
+                                            <a href="">低跟鞋</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">中跟鞋</a>
+                                        </li>
+                                        <li>
+                                            <a href="">高跟鞋</a>
+                                        </li>
+                                        <li>
+                                            <a href="">坡跟鞋</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">增高鞋</a>
+                                        </li>
+                                    </ul>
+                                    <ul class="a1" style="height: 37px;">
+                                        <li>
+                                            <a href="">板鞋</a>
+                                        </li>
+                                        <li>
+                                            <a href="">一脚蹬</a>
+                                        </li>
+                                        <li>
+                                            <a href="">乐福鞋</a>
+                                        </li>
+                                        <li>
+                                            <a href="">草编鞋</a>
+                                        </li>
+                                        <li>
+                                            <a href="">厚底鞋</a>
+                                        </li>
+                                        <li>
+                                            <a href="">穆勒鞋</a>
+                                        </li>
+                                        <li>
+                                            <a href="">人字拖</a>
+                                        </li>
+                                        <li>
+                                            <a href="">凉拖</a>
+                                        </li>
+                                        <li>
+                                            <a href="">平跟凉鞋</a>
+                                        </li>
+                                        <li>
+                                            <a href="">中跟凉鞋</a>
+                                        </li>
+                                        <li>
+                                            <a href="">高跟凉鞋</a>
+                                        </li>
+                                        <li>
+                                            <a href="">坡跟凉鞋</a>
+                                        </li>
+                                        <li>
+                                            <a href="">厚跟凉鞋</a>
+                                        </li>
+                                    </ul>
+                                    <ul class="a1">
+                                        <li>
+                                            <a href="" style="color: red;">切尔西靴</a>
+                                        </li>
+                                        <li>
+                                            <a href="">马丁靴</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">雪地靴</a>
+                                        </li>
+                                        <li>
+                                            <a href="">裸靴</a>
+                                        </li>
+                                        <li>
+                                            <a href="">短靴</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">长靴</a>
+                                        </li>
+                                    </ul>
+                                    <ul class="a1">
+                                        <li>
+                                            <a href="" style="color: red;">正装皮鞋</a>
+                                        </li>
+                                        <li>
+                                            <a href="">休闲皮鞋</a>
+                                        </li>
+                                    </ul>
+                                    <ul class="a1">
+                                        <li>
+                                            <a href="" style="color: red;">雨靴</a>
+                                        </li>
+                                        <li>
+                                            <a href="">家居鞋</a>
+                                        </li>
+                                        <li>
+                                            <a href="">运动户外鞋</a>
+                                        </li>
+                                    </ul>
+                                </section>
+                                <h4>男鞋</h4>
+                                <ul class="a1">
+                                    <li>
+                                        <a href="">正装皮鞋</a>
+                                    </li>
+                                    <li>
+                                        <a href="">休闲皮鞋</a>
+                                    </li>
+                                </ul>
+                                <ul class="a1">
+                                    <li>
+                                        <a href="">板鞋</a>
+                                    </li>
+                                    <li>
+                                        <a href="">一脚蹬</a>
+                                    </li>
+                                    <li>
+                                        <a href="">乐福鞋鞋</a>
+                                    </li>
+                                    <li>
+                                        <a href="">人字拖</a>
+                                    </li>
+                                    <li>
+                                        <a href="">凉拖</a>
+                                    </li>
+                                    <li>
+                                        <a href="">凉鞋</a>
+                                    </li>
+                                </ul>
+                                <ul class="a1">
+                                    <li>
+                                        <a href="">切尔西靴</a>
+                                    </li>
+                                    <li>
+                                        <a href="">马丁靴</a>
+                                    </li>
+                                    <li>
+                                        <a href="">雪地靴</a>
+                                    </li>
+                                    <li>
+                                        <a href="">沙漠靴</a>
+                                    </li>
+                                    <li>
+                                        <a href="">短靴</a>
+                                    </li>
+                                    <li>
+                                        <a href="">长靴</a>
+                                    </li>
+                                </ul>
+                                <ul class="a1">
+                                    <li>
+                                        <a href="">家居鞋</a>
+                                    </li>
+                                    <li>
+                                        <a href="">运动户外鞋</a>
+                                    </li>
+                                </ul>
+                            </section>
+                            <section class="act_right">
+                                <h4>热门品牌</h4>
+                                <ul class="a3">
+                                    <li>
+                                        <a href="" style="color: red;">Gucci</a>
+                                    </li>
+                                    <li>
+                                        <a href="" style="color: red;">Burberry</a>
+                                    </li>
+                                    <li>
+                                        <a href="">S.T.Dupont</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Miu Miu</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Chloe</a>
+                                    </li>
+                                    <li>
+                                        <a href="" style="color: red;">Bally</a>
+                                    </li>
+                                    <li>
+                                        <a href="">fendi</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Furla</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Longchamp</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Kenzo</a>
+                                    </li>
+                                </ul>
+                                <ul class="a4">
+                                    <li>
+                                        <a href="" style="color: red;">Prada</a>
+                                    </li>
+                                    <li>
+                                        <a href="" style="color: red;">Michael Kors</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Bottega Veneta</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Valentino</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Givenchy</a>
+                                    </li>
+                                    <li>
+                                        <a href="" style="color: red;">Saint Laurent</a>
+                                    </li>
+                                    <li>
+                                        <a href="" style="color: red;">Coach</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Tory Burch</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Aspinal of london</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Balenciaga</a>
+                                    </li>
+                                </ul>
+                            </section>
+                        </section>
+                    </li>
+                    <li>
+                        <a href="" class="z4">腕表</a>
+                        <section class="active4">
+                            <section class="T_top1 ">
+                                <section class="TL">
+                                    <h4>腕表</h4>
+                                    <section class="b4" style="border-bottom: 1px dashed #d7d7d7; width: 450px;">
+                                    </section>
+                                    <br>
+                                    <h4>女表</h4>
+                                    <section class="TL_R">
+                                        <section class="b4">
+                                            <h5>高档品牌</h5>
+                                            <span>：</span>
+                                            <ul class="a5">
+                                                <li>
+                                                    <a href="">欧米茄</a>
+                                                </li>
+
+                                            </ul>
+                                        </section>
+                                        <section class="b4">
+                                            <h5>中档品牌</h5>
+                                            <span>：</span>
+                                            <ul class="a5">
+                                                <li>
+                                                    <a href="">西铁城</a>
+                                                </li>
+
+                                            </ul>
+                                        </section>
+                                        <section class="b4">
+                                            <h5 style="height: 35px;">时尚品牌</h5>
+                                            <span> ：</span>
+                                            <ul class="a7" style="margin-left: 0;width: 386px;">
+                                                <li>
+                                                    <a href="" style="color: red">安普里奥.阿玛尼</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" style="color: red">博柏利</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" style="color: red">卡尔文.克莱恩</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">马克.雅可布</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">迈克.柯尔</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">蔻驰</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Festina</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">TRIWA</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Harry Williams</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">更多</a>
+                                                </li>
+                                            </ul>
+                                        </section>
+                                        <section class="b4">
+                                            <h5>石英表</h5>
+                                            <span> ：</span>
+                                            <ul class="a8" style="margin-left: 0">
+                                                <li>
+                                                    <a href="">安普里奥.阿玛尼</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">博柏利</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">蔻驰</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">迈克.柯尔</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">Festina</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">欧米茄</a>
+                                                </li>
+                                            </ul>
+                                        </section>
+                                        <section class="b4">
+                                            <h5>机械表</h5>
+                                            <span> ：</span>
+                                            <ul class="a7" style="margin-left: 0">
+                                                <li>
+                                                    <a href="">欧米茄</a>
+                                                </li>
+
+                                            </ul>
+                                        </section>
+                                    </section>
+                                </section>
+                                <section class="TR">
+                                    <h3 style="font-weight: bold;">热门品牌：</h3>
+                                    <ul class="aa3">
+                                        <li>
+                                            <a href="" style="color: red;">欧米茄</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">DKNY</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">蔻驰</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">天骏</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">迈克.柯尔</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">天柏伦</a>
+                                        </li>
+
+                                    </ul>
+                                    <ul class="aa4">
+                                        <li>
+                                            <a href="" style="color: red;">安普里奥.阿玛尼</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">古驰</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">卡尔文.克莱恩</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">马克.雅克布</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">博柏利</a>
+                                        </li>
+                                        <li>
+                                            <a href="">西铁城</a>
+                                        </li>
+                                    </ul>
+
+                                </section>
+                            </section>
+                            <section class="T_top2">
+                                <section class="TL">
+                                    <h4>男表</h4>
+                                    <section class="TL_R">
+                                        <section class="b4">
+                                            <h5>高档品牌</h5>
+                                            <span>：</span>
+                                            <ul class="a5">
+                                                <li>
+                                                    <a href="">欧米茄</a>
+                                                </li>
+
+                                            </ul>
+                                        </section>
+                                        <section class="b4">
+                                            <h5>中档品牌</h5>
+                                            <span>：</span>
+                                            <ul class="a5">
+                                                <li>
+                                                    <a href="">摩凡陀</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">天梭</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">西铁城</a>
+                                                </li>
+
+                                            </ul>
+                                        </section>
+                                        <section class="b4">
+                                            <h5 style="height: 35px;">时尚品牌</h5>
+                                            <span> ：</span>
+                                            <ul class="a7" style="margin-left: 0;width: 400px;">
+                                                <li>
+                                                    <a href="" style="color: red">安普里奥.阿玛尼</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" style="color: red">博柏利</a>
+                                                </li>
+                                                <li>
+                                                    <a href="" style="color: red">卡尔文.克莱恩</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">AVI-8</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="">Festina</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">TRIWA</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">更多</a>
+                                                </li>
+                                            </ul>
+                                        </section>
+                                        <section class="b4">
+                                            <h5>石英表</h5>
+                                            <span> ：</span>
+                                            <ul class="a8" style="margin-left: 0">
+                                                <li>
+                                                    <a href="">安普里奥.阿玛尼</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">博柏利</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">天梭</a>
+                                                </li>
+                                            </ul>
+                                            <ul class="a7" style="margin-left: 50px;width: 450px;">
+
+                                                <li>
+                                                    <a href="" style="color: red">卡尔文.克莱恩</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">摩凡陀 </li>
+
+                                                <li>
+                                                    <a href="">AVI-8</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="">Festina</a>
+                                                </li>
+
+                                            </ul>
+                                        </section>
+                                        <section class="b4">
+                                            <h5>机械表</h5>
+                                            <span> ：</span>
+                                            <ul class="a7" style="margin-left: 0">
+                                                <li>
+                                                    <a href="">欧米茄</a>
+                                                </li>
+
+                                            </ul>
+                                        </section>
+                                    </section>
+                                </section>
+                            </section>
+                        </section>
+                    </li>
+                    <li>
+                        <a href="" class="z5">配饰</a>
+                        <section class="active5">
+                            <section class="act_left">
+                                <section class="T_left1">
+                                    <h4>女士配饰</h4>
+                                    <ul class="a1" style="height: 37px;">
+                                        <li>
+                                            <a href="" style="color: red;">披肩</a>
+                                        </li>
+                                        <li>
+                                            <a href="">围巾</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">丝巾</a>
+                                        </li>
+                                        <li>
+                                            <a href="">腰带</a>
+                                        </li>
+                                        <li>
+                                            <a href="">棒球帽</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">针织帽</a>
+                                        </li>
+                                        <li>
+                                            <a href="">礼帽</a>
+                                        </li>
+                                        <li>
+                                            <a href="">耳饰</a>
+                                        </li>
+                                        <li>
+                                            <a href="">戒指</a>
+                                        </li>
+                                        <li>
+                                            <a href="">腕饰/脚链</a>
+                                        </li>
+                                        <li>
+                                            <a href="">吊坠</a>
+                                        </li>
+                                        <li>
+                                            <a href="">项链</a>
+                                        </li>
+                                        <li>
+                                            <a href="">choker</a>
+                                        </li>
+                                        <li>
+                                            <a href="">胸针/胸花</a>
+                                        </li>
+                                        <li>
+                                            <a href="">配饰套装</a>
+                                        </li>
+                                        <li>
+                                            <a href="">太阳镜</a>
+                                        </li>
+                                    </ul>
+                                </section>
+                                <section class="T_left1">
+                                    <h4>男士配饰</h4>
+                                    <ul class="a1" style="width: 450px; height: 35px;">
+                                        <li>
+                                            <a href="">腰带</a>
+                                        </li>
+                                        <li>
+                                            <a href="">围巾/丝巾</a>
+                                        </li>
+                                        <li>
+                                            <a href="">棒球帽</a>
+                                        </li>
+                                        <li>
+                                            <a href="">针织帽</a>
+                                        </li>
+                                        <li>
+                                            <a href="">其他帽子</a>
+                                        </li>
+                                        <li>
+                                            <a href="">领带</a>
+                                        </li>
+                                        <li>
+                                            <a href="">袖扣</a>
+                                        </li>
+                                        <li>
+                                            <a href="">口袋巾</a>
+                                        </li>
+                                        <li>
+                                            <a href="">手套</a>
+                                        </li>
+                                        <li>
+                                            <a href="">戒指</a>
+                                        </li>
+                                        <li>
+                                            <a href="">腕饰</a>
+                                        </li>
+                                        <li>
+                                            <a href="">太阳镜</a>
+                                        </li>
+                                    </ul>
+                                    <ul class="a1">
+                                        <li>
+                                            <a href="">打火机</a>
+                                        </li>
+                                        <li>
+                                            <a href="">烟具</a>
+                                        </li>
+                                    </ul>
+                                </section>
+                                <h4>其他饰品</h4>
+                                <ul class="a1">
+                                    <li>
+                                        <a href="">眼镜/镜架</a>
+                                    </li>
+                                    <li>
+                                        <a href="">手机壳</a>
+                                    </li>
+                                    <li>
+                                        <a href="">挂饰/钥匙扣</a>
+                                    </li>
+                                    <li>
+                                        <a href="">笔具</a>
+                                    </li>
+
+                                </ul>
+                            </section>
+                            <section class="act_right">
+                                <h4>热门品牌</h4>
+                                <ul class="a3">
+                                    <li>
+                                        <a href="" style="color: red;">Swarovski</a>
+                                    </li>
+                                    <li>
+                                        <a href="" style="color: red;">Dior</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Burberry</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Kenzo</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Bvlgari</a>
+                                    </li>
+                                    <li>
+                                        <a href="" style="color: red;">Vivienne</a>
+                                    </li>
+                                    <li>
+                                        <a href="">S.T.Dupont</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Prada</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Blue Nile</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Fendi</a>
+                                    </li>
+                                    <li>
+                                        <a href="">S.T.Dupont</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Prada</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Blue Nile</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Fendi</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Fendi</a>
+                                    </li>
+                                </ul>
+                                <ul class="a4">
+                                    <li>
+                                        <a href="" style="color: red;">Gucci</a>
+                                    </li>
+                                    <li>
+                                        <a href="" style="color: red;">Michael Kors</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Bottega Veneta</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Valentino</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Givenchy</a>
+                                    </li>
+                                    <li>
+                                        <a href="" style="color: red;">Saint Laurent</a>
+                                    </li>
+                                    <li>
+                                        <a href="" style="color: red;">Coach</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Tory Burch</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Aspinal of london</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Balenciaga</a>
+                                    </li>
+                                    <li>
+                                        <a href="" style="color: red;">Saint Laurent</a>
+                                    </li>
+                                    <li>
+                                        <a href="" style="color: red;">Coach</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Tory Burch</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Aspinal of london</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Balenciaga</a>
+                                    </li>
+                                </ul>
+                            </section>
+                        </section>
+                    </li>
+                    <li>
+                        <a href="" class="z6">妆品</a>
+                        <section class="active6">
+                            <section class="act_left">
+                                <section class="T_left1">
+                                    <h4>妆品</h4>
+                                    <section class="b4" style="border-bottom: 1px dashed #d7d7d7; width: 450px;">
+                                    </section>
+                                    <br>
+                                    <h4>女士护肤</h4>
+                                    <ul class="a1" style="height: 37px; width: 400px;">
+                                        <li>
+                                            <a href="" style="color: red;">护肤套装</a>
+                                        </li>
+                                        <li>
+                                            <a href="">洁面</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">卸妆</a>
+                                        </li>
+                                        <li>
+                                            <a href="">爽肤水</a>
+                                        </li>
+                                        <li>
+                                            <a href="">乳液</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">精华</a>
+                                        </li>
+                                        <li>
+                                            <a href="">面霜</a>
+                                        </li>
+                                        <li>
+                                            <a href="">面膜</a>
+                                        </li>
+                                        <ul class="a1">
+                                            <li>
+                                                <a href="">眼霜</a>
+                                            </li>
+                                            <li>
+                                                <a href="">隔离防晒</a>
+                                            </li>
+                                        </ul>
+                                    </ul>
+                                </section>
+                                <section class="T_left1">
+                                    <h4>彩妆</h4>
+                                    <ul class="a1" style="width: 450px;">
+                                        <li>
+                                            <a href="">粉底</a>
+                                        </li>
+                                        <li>
+                                            <a href="">散粉/蜜粉</a>
+                                        </li>
+                                        <li>
+                                            <a href="">睫毛膏</a>
+                                        </li>
+                                        <li>
+                                            <a href="">唇膏</a>
+                                        </li>
+                                        <li>
+                                            <a href="">美甲</a>
+                                        </li>
+
+                                    </ul>
+
+                                </section>
+                                <section class="T_left1">
+                                    <h4>男士护肤</h4>
+                                    <ul class="a1" style="width: 450px;">
+                                        <li>
+                                            <a href="">洁面</a>
+                                        </li>
+                                        <li>
+                                            <a href="">剃须护理</a>
+                                        </li>
+                                        <li>
+                                            <a href="">爽肤水</a>
+                                        </li>
+                                        <li>
+                                            <a href="">乳液</a>
+                                        </li>
+                                        <li>
+                                            <a href="">面霜</a>
+                                        </li>
+                                        <li>
+                                            <a href="">头发护理</a>
+                                        </li>
+                                        <li>
+                                            <a href="">香水</a>
+                                        </li>
+
+                                    </ul>
+
+                                </section>
+                                <section class="T_left1">
+                                    <h4>身体护理</h4>
+                                    <ul class="a1" style="width: 450px; height: 35px;">
+                                        <li>
+                                            <a href="">润体乳</a>
+                                        </li>
+                                        <li>
+                                            <a href="">沐浴</a>
+                                        </li>
+                                        <li>
+                                            <a href="">塑身美体</a>
+                                        </li>
+                                        <li>
+                                            <a href="">身体精油</a>
+                                        </li>
+                                        <li>
+                                            <a href="">洗发水</a>
+                                        </li>
+                                        <li>
+                                            <a href="">护发素</a>
+                                        </li>
+                                        <li>
+                                            <a href="">护手霜</a>
+                                        </li>
+                                        <li>
+                                            <a href="">发膜</a>
+                                        </li>
+                                        <li>
+                                            <a href="">染发</a>
+                                        </li>
+
+                                    </ul>
+
+                                </section>
+                                <section class="T_left1">
+                                    <h4>口腔护理</h4>
+                                    <ul class="a1" style="width: 450px;">
+                                        <li>
+                                            <a href="">牙膏</a>
+                                        </li>
+                                        <li>
+                                            <a href="">牙刷</a>
+                                        </li>
+                                        <li>
+                                            <a href="">洗牙器</a>
+                                        </li>
+                                        <li>
+                                            <a href="">漱口水</a>
+                                        </li>
+
+
+                                    </ul>
+
+                                </section>
+                                <section class="T_left1">
+                                    <h4>香水</h4>
+                                    <ul class="a1" style="width: 450px;">
+                                        <li>
+                                            <a href="">女士香水</a>
+                                        </li>
+                                    </ul>
+
+                                </section>
+                                <h4>美容工具</h4>
+                                <ul class="a1">
+                                    <li>
+                                        <a href="">彩妆工具</a>
+                                    </li>
+                                    <li>
+                                        <a href="">发梳</a>
+                                    </li>
+                                </ul>
+                            </section>
+                            <section class="act_right">
+                                <h4>热门品牌</h4>
+                                <ul class="a3">
+                                    <li>
+                                        <a href="" style="color: red;">Dior</a>
+                                    </li>
+                                    <li>
+                                        <a href="">五谷粮膜</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Rice Force</a>
+                                    </li>
+                                    <li>
+                                        <a href="">KOSE</a>
+                                    </li>
+                                    <li>
+                                        <a href="" style="color: red;">Shiseido</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Saint Laurent</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Prada</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Blue Nile</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Fendi</a>
+                                    </li>
+                                    <li>
+                                        <a href="">S.T.Dupont</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Prada</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Blue Nile</a>
+                                    </li>
+                                    <li>
+                                        <a href="">SK-II</a>
+                                    </li>
+                                    <li>
+                                        <a href="">雅诗兰黛</a>
+                                    </li>
+                                </ul>
+                                <ul class="a4">
+                                    <li>
+                                        <a href="" style="color: red;">Gucci</a>
+                                    </li>
+                                    <li>
+                                        <a href="" style="color: red;">Michael Kors</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Bottega Veneta</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Valentino</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Givenchy</a>
+                                    </li>
+                                    <li>
+                                        <a href="" style="color: red;">Saint Laurent</a>
+                                    </li>
+                                    <li>
+                                        <a href="" style="color: red;">Coach</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Tory Burch</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Aspinal of london</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Balenciaga</a>
+                                    </li>
+                                    <li>
+                                        <a href="" style="color: red;">Saint Laurent</a>
+                                    </li>
+                                    <li>
+                                        <a href="" style="color: red;">Coach</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Tory Burch</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Aspinal of london</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Balenciaga</a>
+                                    </li>
+                                </ul>
+                            </section>
+                        </section>
+
+                    </li>
+                    <li>
+                        <a href="" class="z7">生活</a>
+                        <section class="active7">
+                            <section class="act_left">
+                                <section class="T_left1">
+                                    <h4>生活</h4>
+                                    <section class="b4" style="border-bottom: 1px dashed #d7d7d7; width: 450px;">
+                                    </section>
+                                    <br>
+                                    <h4>厨房和餐具</h4>
+                                    <ul class="a1" style="height: 60px; width: 400px;">
+                                        <li>
+                                            <a href="" style="color: red;">汤锅</a>
+                                        </li>
+                                        <li>
+                                            <a href="">压力锅</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">蒸锅</a>
+                                        </li>
+                                        <li>
+                                            <a href="">煎锅</a>
+                                        </li>
+                                        <li>
+                                            <a href="">奶锅</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">套锅</a>
+                                        </li>
+                                        <li>
+                                            <a href="">保鲜盒/饭盒</a>
+                                        </li>
+                                        <li>
+                                            <a href="">调料器皿</a>
+                                        </li>
+                                        <ul class="a1">
+                                            <li>
+                                                <a href="" style="color: red;">刀具</a>
+                                            </li>
+                                            <li>
+                                                <a href="">粘锅</a>
+                                            </li>
+                                            <li>
+                                                <a href="" style="color: red;">锅铲/夹</a>
+                                            </li>
+                                            <li>
+                                                <a href="">厨房收纳</a>
+                                            </li>
+                                            <li>
+                                                <a href="">厨房小工具</a>
+                                            </li>
+                                            <li>
+                                                <a href="" style="color: red;">筷勺/刀叉</a>
+                                            </li>
+                                            <li>
+                                                <a href="">碗/碟/盆</a>
+                                            </li>
+                                            <li>
+                                                <a href="">果盘托盘</a>
+                                            </li>
+                                            <li>
+                                                <a href="">烘焙烧烤</a>
+                                            </li>
+                                            <li>
+                                                <a href="">餐具套装</a>
+                                            </li>
+                                        </ul>
+                                    </ul>
+                                </section>
+                                <section class="T_left1">
+                                    <h4>酒水咖啡茶具</h4>
+                                    <ul class="a1" style="width: 450px;height: 40px;">
+                                        <li>
+                                            <a href="">保温杯</a>
+                                        </li>
+                                        <li>
+                                            <a href="">马克杯</a>
+                                        </li>
+                                        <li>
+                                            <a href="">水杯</a>
+                                        </li>
+                                        <li>
+                                            <a href="">冰桶</a>
+                                        </li>
+                                        <li>
+                                            <a href="">酒杯</a>
+                                        </li>
+                                        <li>
+                                            <a href="">酒架酒塞</a>
+                                        </li>
+                                        <li>
+                                            <a href="">酒具套装</a>
+                                        </li>
+                                        <li>
+                                            <a href="">醒酒器</a>
+                                        </li>
+                                        <li>
+                                            <a href="">水壶</a>
+                                        </li>
+                                        <li>
+                                            <a href="">茶具/咖啡具</a>
+                                        </li>
+                                        <li>
+                                            <a href="">茶杯/咖啡杯</a>
+                                        </li>
+                                    </ul>
+
+                                </section>
+                                <section class="T_left1">
+                                    <h4>卧室和家纺</h4>
+                                    <ul class="a1" style="width: 450px;height: 40px;">
+                                        <li>
+                                            <a href="">床单</a>
+                                        </li>
+                                        <li>
+                                            <a href="">被套</a>
+                                        </li>
+                                        <li>
+                                            <a href="">枕套</a>
+                                        </li>
+                                        <li>
+                                            <a href="">床垫</a>
+                                        </li>
+                                        <li>
+                                            <a href="">毛毯/披毯</a>
+                                        </li>
+                                        <li>
+                                            <a href="">三件套</a>
+                                        </li>
+                                        <li>
+                                            <a href="">四件套</a>
+                                        </li>
+                                        <li>
+                                            <a href="">抱枕/坐垫</a>
+                                        </li>
+                                        <li>
+                                            <a href="">被芯</a>
+                                        </li>
+                                        <li>
+                                            <a href="">枕芯</a>
+                                        </li>
+
+                                    </ul>
+
+                                </section>
+                                <section class="T_left1">
+                                    <h4>浴室用品</h4>
+                                    <ul class="a1" style="width: 450px;">
+                                        <li>
+                                            <a href="">发梳</a>
+                                        </li>
+                                        <li>
+                                            <a href="">浴巾/毛巾</a>
+                                        </li>
+                                        <li>
+                                            <a href="">牙刷</a>
+                                        </li>
+                                        <li>
+                                            <a href="">浴衣</a>
+                                        </li>
+
+
+                                    </ul>
+
+                                </section>
+                                <section class="T_left1">
+                                    <h4>家庭装饰</h4>
+                                    <ul class="a1" style="width: 450px;">
+                                        <li>
+                                            <a href="">摆件挂饰</a>
+                                        </li>
+                                        <li>
+                                            <a href="">灯饰</a>
+                                        </li>
+                                        <li>
+                                            <a href="">洗花瓶花艺</a>
+                                        </li>
+                                        <li>
+                                            <a href="">相框相册</a>
+                                        </li>
+                                        <li>
+                                            <a href="">香氛蜡烛</a>
+                                        </li>
+                                        <li>
+                                            <a href="">室内香薰</a>
+                                        </li>
+                                        <li>
+                                            <a href="">烛台</a>
+                                        </li>
+                                        <li>
+                                            <a href="">座钟</a>
+                                        </li>
+                                    </ul>
+                                    <ul class="a1">
+                                        <li>
+                                            <a href="">地垫/防滑脚垫</a>
+                                        </li>
+                                        <li>
+                                            <a href="">餐垫杯垫</a>
+                                        </li>
+                                    </ul>
+                                </section>
+                                <section class="T_left1">
+                                    <h4>生活电器</h4>
+                                    <ul class="a1" style="width: 450px;">
+                                        <li>
+                                            <a href="">除螨机</a>
+                                        </li>
+                                        <li>
+                                            <a href="">榨汁机</a>
+                                        </li>
+                                        <li>
+                                            <a href="">料理机</a>
+                                        </li>
+                                        <li>
+                                            <a href="">烤箱</a>
+                                        </li>
+                                    </ul>
+                                    <ul class="a1" style="width: 450px;">
+                                        <li>
+                                            <a href="">烤面包机</a>
+                                        </li>
+                                        <li>
+                                            <a href="">咖啡机</a>
+                                        </li>
+                                        <li>
+                                            <a href="">酸奶机</a>
+                                        </li>
+                                        <li>
+                                            <a href="">电水壶</a>
+                                        </li>
+                                        <li>
+                                            <a href="">其他神器</a>
+                                        </li>
+                                    </ul>
+
+                                </section>
+                                <section class="T_left1">
+                                    <h4>生活日用</h4>
+                                    <ul class="a1" style="width: 450px;">
+                                        <li>
+                                            <a href="">清洁</a>
+                                        </li>
+                                        <li>
+                                            <a href="">收纳</a>
+                                        </li>
+                                        <li>
+                                            <a href="">雨伞</a>
+                                        </li>
+                                        <li>
+                                            <a href="">热水袋</a>
+                                        </li>
+                                        <li>
+                                            <a href="">烟灰缸</a>
+                                        </li>
+                                    </ul>
+                                </section>
+                                <section class="T_left1">
+                                    <h4>食品和健康</h4>
+                                    <ul class="a1" style="width: 450px;">
+                                        <li>
+                                            <a href="">营养保健</a>
+                                        </li>
+                                        <li>
+                                            <a href="">口罩</a>
+                                        </li>
+                                        <li>
+                                            <a href="">酒类</a>
+                                        </li>
+
+                                    </ul>
+                                </section>
+                                <section class="T_left1">
+                                    <h4>文具和数码</h4>
+                                    <ul class="a1" style="width: 450px;">
+                                        <li>
+                                            <a href="">笔具</a>
+                                        </li>
+                                        <li>
+                                            <a href="">笔记本</a>
+                                        </li>
+                                        <li>
+                                            <a href="">办公文具</a>
+                                        </li>
+                                        <li>
+                                            <a href="">音响</a>
+                                        </li>
+                                    </ul>
+                                </section>
+                                <h4>旅行</h4>
+                                <ul class="a1">
+                                    <li>
+                                        <a href="">登机箱</a>
+                                    </li>
+                                    <li>
+                                        <a href="">托运行李箱</a>
+                                    </li>
+                                    <li>
+                                        <a href="">旅行包</a>
+                                    </li>
+                                    <li>
+                                        <a href="">登山包</a>
+                                    </li>
+                                    <li>
+                                        <a href="">证件夹/套</a>
+                                    </li>
+                                    <li>
+                                        <a href="">户外用品</a>
+                                    </li>
+                                    <li>
+                                        <a href="">汽车用品</a>
+                                    </li>
+                                </ul>
+                            </section>
+                            <section class="act_right">
+                                <h4>热门品牌</h4>
+                                <ul class="a3">
+                                    <li>
+                                        <a href="" style="color: red;">Maitland Smith</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Hamilton Beach</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Aspinal of london</a>
+                                    </li>
+                                    <li>
+                                        <a href="">MeHow</a>
+                                    </li>
+                                    <li>
+                                        <a href="" style="color: red;">Mario Cioni</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Wedgwood</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Tasaisikyo</a>
+                                    </li>
+
+                                </ul>
+                                <ul class="a4">
+                                    <li>
+                                        <a href="" style="color: red;">S.T.Dupont</a>
+                                    </li>
+                                    <li>
+                                        <a href="" style="color: red;">SpringMaid</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Hollywood Homes</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Sage</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Prouna</a>
+                                    </li>
+                                    <li>
+                                        <a href="" style="color: red;">Hankook</a>
+                                    </li>
+                                    <li>
+                                        <a href="" style="color: red;">Aussino</a>
+                                    </li>
+
+                                </ul>
+                            </section>
+                        </section>
+                    </li>
+                    <li>
+                        <a href="" class="z8">婴童</a>
+                        <section class="active8">
+                            <section class="act_left">
+                                <section class="T_left1">
+                                    <h4>婴童</h4>
+                                    <section class="b4" style="border-bottom: 1px dashed #d7d7d7; width: 450px;">
+                                    </section>
+                                    <br>
+                                    <h4>女童鞋</h4>
+                                    <ul class="a1" style="height: 37px; width: 400px;">
+                                        <li>
+                                            <a href="" style="color: red;">凉鞋/拖鞋</a>
+                                        </li>
+                                        <li>
+                                            <a href="">休闲鞋</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">运动鞋</a>
+                                        </li>
+                                        <li>
+                                            <a href="">靴子</a>
+                                        </li>
+                                        <li>
+                                            <a href="">雪地靴</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">皮鞋</a>
+                                        </li>
+
+                                    </ul>
+                                </section>
+                                <section class="T_left1">
+                                    <h4>男童鞋</h4>
+                                    <ul class="a1" style="width: 450px;">
+                                        <li>
+                                            <a href="" style="color: red;">凉鞋/拖鞋</a>
+                                        </li>
+                                        <li>
+                                            <a href="">休闲鞋</a>
+                                        </li>
+                                        <li>
+                                            <a href="" style="color: red;">运动鞋</a>
+                                        </li>
+                                    </ul>
+
+                                </section>
+                                <section class="T_left1">
+                                    <h4>男童装</h4>
+                                    <ul class="a1" style="width: 450px;">
+                                        <li>
+                                            <a href="">短裤</a>
+                                        </li>
+                                        <li>
+                                            <a href="">T恤</a>
+                                        </li>
+                                        <li>
+                                            <a href="">羽绒服</a>
+                                        </li>
+                                        <li>
+                                            <a href="">套装</a>
+                                        </li>
+                                        <li>
+                                            <a href="">外套</a>
+                                        </li>
+                                        <li>
+                                            <a href="">毛衣/针织衫</a>
+                                        </li>
+                                        <li>
+                                            <a href="">衬衫</a>
+                                        </li>
+                                        <li>
+                                            <a href="">长裤</a>
+                                        </li>
+                                        <li>
+                                            <a href="">卫衣</a>
+                                        </li>
+                                    </ul>
+
+                                </section>
+                                <section class="T_left1">
+                                    <h4>女童装</h4>
+                                    <ul class="a1" style="width: 450px; height: 35px;">
+                                        <li>
+                                            <a href="">T恤</a>
+                                        </li>
+                                        <li>
+                                            <a href="">卫衣</a>
+                                        </li>
+                                        <li>
+                                            <a href="">连衣裙</a>
+                                        </li>
+                                        <li>
+                                            <a href="">半身裙</a>
+                                        </li>
+                                        <li>
+                                            <a href="">棉服</a>
+                                        </li>
+                                        <li>
+                                            <a href="">羽绒服</a>
+                                        </li>
+                                        <li>
+                                            <a href="">毛衣/针织衫</a>
+                                        </li>
+                                        <li>
+                                            <a href="">短裤</a>
+                                        </li>
+                                        <li>
+                                            <a href="">长裤</a>
+                                        </li>
+                                        <li>
+                                            <a href="">外套</a>
+                                        </li>
+                                        <li>
+                                            <a href="">套装</a>
+                                        </li>
+
+                                    </ul>
+
+                                </section>
+                                <section class="T_left1">
+                                    <h4>婴儿鞋服</h4>
+                                    <ul class="a1" style="width: 450px;">
+                                        <li>
+                                            <a href="">礼盒</a>
+                                        </li>
+                                        <li>
+                                            <a href="">连体衣</a>
+                                        </li>
+                                        <li>
+                                            <a href="">婴儿鞋</a>
+                                        </li>
+
+
+                                    </ul>
+
+                                </section>
+                                <section class="T_left1">
+
+                                    <ul class="a1" style="width: 450px;">
+                                        <li>
+                                            <a href="">男童配饰</a>
+                                        </li>
+                                        <li>
+                                            <a href="">女童配饰</a>
+                                        </li>
+                                    </ul>
+
+                                </section>
+                                <section class="T_left1">
+                                    <h4>儿童包袋</h4>
+                                    <ul class="a1" style="width: 450px;">
+                                        <li>
+                                            <a href="">双肩包</a>
+                                        </li>
+
+                                    </ul>
+
+                                </section>
+                                <h4>婴幼用品</h4>
+                                <ul class="a1">
+                                    <li>
+                                        <a href="">童车童床</a>
+                                    </li>
+                                    <li>
+                                        <a href="">喂养用品</a>
+                                    </li>
+                                    <li>
+                                        <a href="">婴幼玩具</a>
+                                    </li>
+                                    <li>
+                                        <a href="">婴幼家纺</a>
+                                    </li>
+                                    <li>
+                                        <a href="">智能婴幼用品</a>
+                                    </li>
+                                    <li>
+                                        <a href="">奶粉</a>
+                                    </li>
+                                    <li>
+                                        <a href="">洗护用品</a>
+                                    </li>
+                                </ul>
+                            </section>
+                            <section class="act_right">
+                                <h4>热门品牌</h4>
+                                <ul class="a3">
+                                    <li>
+                                        <a href="" style="color: red;">Eitech</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Jersey</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Moncler</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Armani Junior</a>
+                                    </li>
+                                    <li>
+                                        <a href="" style="color: red;">Young Versace</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Gululu</a>
+                                    </li>
+                                    <li>
+                                        <a href="">iBabyCloud</a>
+                                    </li>
+
+                                </ul>
+                                <ul class="a4">
+                                    <li>
+                                        <a href="" style="color: red;">Engino</a>
+                                    </li>
+                                    <li>
+                                        <a href="" style="color: red;">Kenzo</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Disney</a>
+                                    </li>
+                                    <li>
+                                        <a href="">MSGM</a>
+                                    </li>
+                                    <li>
+                                        <a href="">I natural angel</a>
+                                    </li>
+                                    <li>
+                                        <a href="" style="color: red;">Fendi</a>
+                                    </li>
+                                </ul>
+                            </section>
+                        </section>
+                    </li>
+                </ul>
+            </section>
+        </section>
+        <section class="body_w">
+            <section class="D_top1">
+                <a href="../index1.html">
+                    <img src="../src/images/c7f49b51-f1f2-4617-a472-d6e2638202b6.jpg" alt="">
+                </a>
+            </section>
+            <section class="D_top2">
+                <section class="D_top2_left">
+                    <span>
+                        <img src="../src/images/a1.png" alt="">
+                    </span>
+                    <span>您的位置：</span>
+                    <a href="../index1.html">走秀首页</a>
+                    <span>></span>
+                    <a href="">女包</a>
+                    <span>
+                        <img src="../src/images/a2.png" alt="">
+                    </span>
+                    <span>></span>
+                    <a href="">手提包</a>
+                    <span>
+                        <img src="../src/images/a2.png" alt="">
+                    </span>
+                    <span>></span>
+                    <a href="">手提包</a>
+                    <span>
+                        <img src="../src/images/a2.png" alt="">
+                    </span>
+                </section>
+                <section class="D_top2_right">
+                    <span>共有
+                        <i id="D_top2_right"></i>件商品</span>
+                </section>
+            </section>
+            <section class="D_top3">
+                <section class="D_top3_one">
+                    <section class="D_top3_left">
+                        <span>品牌：</span>
+                    </section>
+                    <section class="D_top3_right">
+                        <span>
+                            <a href="">Alexander</a>
+                        </span>
+
+                        <span>
+                            <a href="">Bottega Veneta</a>
+                        </span>
+                        <span>
+                            <a href="">Burberry</a>
+                        </span>
+                        <span>
+                            <a href="">Balenciaga</a>
+                        </span>
+                        <span>
+                            <a href="">Boy London</a>
+                        </span>
+                        <span>
+                            <a href="">Coach</a>
+                        </span>
+                        <span>
+                            <a href="">Celne</a>
+                        </span>
+                        <span>
+                            <a href="">Chbe</a>
+                        </span>
+                        <span>
+                            <a href="">Dior</a>
+                        </span>
+                        <span>
+                            <a href="">Emporio Armani</a>
+                        </span>
+
+                    </section>
+
+                </section>
+                <section class="D_top3_two">
+                    <section class="D_top3_left" style="height: 45px;line-height: 45px;">
+                        <span>价格：</span>
+                    </section>
+                    <section class="D_top3_right" style="height: 45px;">
+                        <a href="">0-500元</a>
+                        <a href="">500-1000元</a>
+                        <a href="">1000-3000元</a>
+                        <a href="">3000-5000元</a>
+                        <a href="">5000-8000元</a>
+                        <a href="">8000元以上</a>
+                    </section>
+                </section>
+                <section class="D_top3_bttom" style="z-index: 0;">
+                    <a href="">更多选项(颜色等)</a>
+                </section>
+            </section>
+            <section class="D_top4">
+                <section class="D_top4_one">
+                    <section class="D_top4_left">
+                        <a href="  javascript:;" id="moren">默认
+
+                            <i></i>
+                        </a>
+                        <a href="javascript:;" id="price">价格
+                            <i></i>
+                        </a>
+                        <a href="">折扣
+                            <i></i>
+                        </a>
+                        <a href="">上架时间
+                            <i></i>
+                        </a>
+                    </section>
+                    <section class="D_top4_center">
+                        <span>发货方式：</span>
+                        <input type="radio" name="" id="">全部
+                        <input type="radio" name="" id="">海外发货
+                        <input type="radio" name="" id="">国内发货
+                    </section>
+                    <div class="xs-minpage">
+                        <ul>
+                            <li class="pagenum">
+                                <span id="b3"></span>
+                                <span>/</span>
+                                <span id="b4"></span>
+                            </li>
+                            <li class="">
+                                <a class="l_page" href="" style="
+                                    padding-left: 10px;
+                                    background-position: 0 -432px;
+                                ">上一页</a>
+                            </li>
+                            <li class="disable">
+                                <a class="r_page" href="javascript:void(0);" style="    padding-right: 10px;
+                                background-position: 40px -452px;">下一页</a>
+                            </li>
+                    </div>
+                </section>
+                <ul id="list">
+                    <!-- <li class="item" data-itemid="53322024">
+                        <ol>
+                            <li class="pic">
+                                <a href="">
+                                    <img alt="女士手提包 12159959 红色"
+                                        src="http://image.zoshow.com/upload/goods20171120/74353056/743530560001/g1_234_312.jpg?0"
+                                        style="display: inline;">
+                                    <div class="name" style="bottom: 0px;">
+                                        <p>参加满减
+                                            <span></span>
+                                        </p>
+                                    </div>
+                                </a>
+                                <div class="sold_size" style="top: 0px;">
+                                    <p class="sold_size_tit">可售尺码：</p>
+                                    <ul class="sold_size_list clearfix J_sizeArea">
+                                        <li class="ssl_item">
+                                            <span>均码</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="tit">
+                                <span>
+                                    Tory Burch
+                                </span>
+                                <a clkstat="atype=itemclk|stype=list|sattr=%E6%89%8B%E6%8F%90%E5%8C%85|clk_loc=1|itemid=53322024" href="http://item.xiu.com/product/53322024.shtml"
+                                    target="_blank">女士手提包 12159959 红色</a>
+                            </li>
+                            <li class="price">
+                                <span class="showprice ">2720</span>
+                            </li>
+                        </ol>
+                        <div class="cl"></div>
+                    </li> -->
+                    <!-- <li>
+                                <h3>申方剑</h3>
+                                <p>观众朋友们，球迷朋友们！大家晚上好，欢迎收看风云足球频道，现在我们为您带来的是一场宇宙足球</p>
+                            </li>
+                             -->
+                </ul>
+                <!-- <script>
+           
+           var list=document.getElementById('list');
+                    list.onmouseover=function(ev){
+                    var ev=ev||window.event;
+                    var name=list.getElementsByClassName('name');
+                    var item=list.getElementsByClassName('item');
+                    var sold_size=list.getElementsByClassName('sold_size');
+                        console.log(ev.target);
+                        if(ev.target.className == 'item'){
+                            name.style.bottom='-25px';
+                            sold_size.style.top='-29px';
+                            item.style.border='2px solid rgb(228, 225, 225);';
+                    }
+                    }
+                  
+                
+                </script> -->
+                <p class="page" id="page">
+                    <!-- <span class="active">1</span>
+                            <span>2</span>
+                            <span>3</span> -->
+                </p>
+                <div class="xs-btm-search">
+                    <form id="J_searchFormBottom" method="get" autocomplete="off">
+                        <div class="searchbox">
+                            <div class="inputbg">
+                                <input id="J_searchInputBottom" name="kw" class="txt-input leon-autosug_input" type="text" value="" autocomplete="off">
+                            </div>
+                            <button class="sbtn" type="submit">搜索</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+        </section>
+
+        <div id="backtop">
+            <span class="closed">关闭</span>
+            <div class="r_menu">
+                <!--自定义内容 开始-->
+                <div class="right_natigation">
+                </div>
+                <!--自定义内容 结束-->
+                <a onclick="openLive();" class="service"></a>
+                <a href="cart.html" id="right_new_bag" target="_blank" class="buy">
+                    <span class="redx shopNum num" id="num">0</span>
+                    <script>
+                        var gouwu = document.getElementById('num');
+                        var url = '../src/api/cartlist.php';
+                        //传两个参数进去，参数一：页数；参数二：每页显示多少条
+                        var data = 'qty=';//键值对的形式
+                        var arr3 = [];
+                        ajax('get', url, data, function (str) {
+                            // console.log(str);
+                            var arr = JSON.parse(str);
+                            console.log(arr);
+                            arr.list.map(function (item) {
+                                var str2 = 0;
+                                str2 += item.shuliang * 1;
+                                console.log(str2);
+                                arr3.push(str2);
+                            });
+                            console.log(arr3);
+                            var str3 = 0;
+                            for (var i = 0; i < arr3.length; i++) {
+                                str3 += arr3[i];
+                            }
+                            console.log(str3);
+                            gouwu.innerHTML = str3;
+                        });
+                    </script>
+                </a>
+                <a href="http://my.xiu.com/v3/spitslot/create" target="_blank" class="mail"></a>
+                <a href="javascript:void(0)" class="backtop"></a>
+            </div>
+        </div>
+        <section class="footer_frame">
+            <section class="footer">
+                <div class="service_info cindex_info">
+                    <div class="w service_nr">
+                        <div class="cs">
+                            <a href="" title="在线客服" class="kf"></a>
+                            <p class="p_num"></p>
+                            <a href="" class="mail_link" title="我要吐槽"></a>
+                        </div>
+                        <dl class="new_dl">
+                            <dd>
+                                <a id="showCEOmail" href="javascript:void(0);" target="_blank" class="replace" rel="nofollow">CEO邮箱</a>
+                            </dd>
+
+                            <dd>
+                                <a rel="nofollow" target="_blank" href="">售后服务</a>
+                            </dd>
+
+                            <dd>
+                                <a rel="nofollow" target="_blank" href="">常见问题</a>
+                            </dd>
+
+                            <dd class="gs_intro">
+                                <a rel="nofollow" target="_blank" href="javascript:void(0);">关税说明</a>
+
+                                <div class="hide_box">
+                                    <p>商品为海外商品，关税由海外卖家承担，如顾客接海关或物流通知缴纳税费，请先行按照国家规定支付，再凭纳税凭证联系走秀客服找海外卖家报销。</p>
+
+                                </div>
+
+                            </dd>
+
+                            <dd>
+                                <a href="">物流配送</a>
+                            </dd>
+
+                        </dl>
+
+                        <dl class="new_us">
+
+                            <dt>
+                                <span>关注我们</span>
+                            </dt>
+
+                            <dd>
+                                <p class="new_us_p">
+                                    <a class="weixin" href="">微信
+                                        <i class="erweima">
+                                            <img src="../src/images/weixinQr.jpg" alt="">
+                                        </i>
+                                    </a>
+                                    <a class="weibo" href="">微博</a>
+                                    <a class="instagram" href="">instagram</a>
+                                    <a class="facebook" href="">facebook</a>
+                                </p>
+                            </dd>
+                            <dd>
+                                <div class="email_box">
+                                    <form name="emailSubForm" id="emailSubForm">
+                                        <input type="text" class="email_in" name="emailAddress" id="emailAddress" placeholder="订阅最新时尚资讯邮件..." value="">
+
+                                        <input type="hidden" name="channel_type" value="1">
+                                        <input type="hidden" id="smsType" name="smsType" value="3">
+
+                                    </form>
+
+                                    <input type="button" class="submit_btn" value="" id="emailSub">
+
+                                    <div class="email_tip" id="emailSubTips">数据提交中...</div>
+
+                                </div>
+
+                            </dd>
+
+                        </dl>
+
+                        <dl class="wchat">
+
+                            <dt>我们的APP</dt>
+
+                            <dd></dd>
+
+                        </dl>
+
+                    </div>
+
+                </div>
+
+                <div class="footlink ">
+
+                    <div class="fLink_con ">
+
+                        <ul>
+
+                            <li>
+                                <a href="" rel="nofollow ">关于走秀</a>|</li>
+
+                            <li>
+                                <a rel="nofollow ">About us</a>|</li>
+
+                            <li>
+                                <a rel="nofollow ">媒体报道</a>|</li>
+
+                            <li>
+                                <a href="" rel="nofollow ">品牌招商</a>|</li>
+
+                            <li>
+                                <a href="">网站地图</a>|</li>
+
+                            <li>
+                                <a href="" rel="nofollow ">联系我们</a>|</li>
+
+                            <li>
+                                <a href="">品牌大全</a>|</li>
+
+                            <li>
+                                <a href="" rel="nofollow ">邮件订阅</a>|</li>
+
+                            <li>
+                                <a href="">WAP站点</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <div class="foot_btn ">
+
+                    <a class="fa1" href="javascript:;" style="cursor:default" title="海外直发"></a>
+
+                    <a class="fa2" href="javascript:;" style="cursor:default" title="正品保证"></a>
+
+                    <a class="fa3" href="javascript:;" style="cursor:default" title="退货保障"></a>
+
+                </div>
+
+                <p class="copyright ">Copyright &copy; 2008-
+                    <script type="text/javascript">
+
+                        document.write(new Date().getFullYear());
+
+                    </script>
+                    <a href="">Xiu.com</a>深圳走秀网络科技有限公司 版权所有 .
+                    <a href="">粤ICP备07502993号</a>
+
+                    <a href="">
+
+                        <img src="src/images/wab.png" width="16" height="16" style="margin: -4px 0px 0 0;"> 粤公网安备 44030402000804号
+
+                    </a>
+
+                </p>
+
+                <div class="des_div ">
+
+                    <a href="">
+
+                        <img src="../src/images/c_01.jpg">
+
+                    </a>
+
+                    <a href="">
+
+                        <img src="../src/images/c_11.jpg">
+
+                    </a>
+
+
+                    <a href="">
+
+                        <img src="../src/images/c_04.jpg">
+
+                    </a>
+
+
+
+                    <a href="">
+
+                        <img src="../src/images/c_08.jpg">
+
+                    </a>
+
+                    <a href="">
+
+                        <img src="../src/images/c_09.jpg">
+
+                    </a>
+
+
+                </div>
+
+                </div>
+
+
+            </section>
+        </section>
+    </section>
+</body>
+<script src="../js/list.js"></script>
+
+</html>

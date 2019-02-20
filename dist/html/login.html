@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/css.css">
+    <script src="../js/common.js"></script>
+    <script src="../js/texiao.js"></script>
+</head>
+
+<body id="login-body">
+    <!-- 公用头部 开始 -->
+    <div id="head" class="gw960">
+        <input type="hidden" id="xiuIndex" value="">
+        <!-- <div class="layout-inlet zoom">
+        </div> -->
+        <!-- LOGO -->
+        <div class="layout-header">
+            <h1 class="logo-box">
+                <a href="" class="logo">
+                    <img src="../src/images/logo_mini.png">
+                </a>
+            </h1>
+        </div>
+    </div>
+    <!-- 公用头部 结束-->
+    <!-- 页面主体 -->
+    <div id="page" class="login-page">
+        <div id="J_login_theme_bg" class="login-bgcolor">
+            <div id="J_login_theme" class="login-theme" style="background:url(../src/images/login_bg.jpg) center no-repeat #f7f2ec;"></div>
+            <div class="login-box ">
+                <form autocomplete="off" method="post" action="">
+                    <div id="J_login_panel" class="login-panel">
+                        <ul class="login-tab">
+                            <li>
+                                <a class="active" href="#">注册</a>
+                            </li>
+                            <li>
+                                <a href="#">登录</a>
+                            </li>
+                        </ul>
+                        <div class="login-form clfix">
+                            <ul>
+                                <!-- 注册 -->
+                                <div id="reg" class="box1">
+                                    <!-- <h4>注册</h4> -->
+                                    <div>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <p>用户名：
+                                            <input type="text" name="username" id="username1" placeholder="请输入用户名">
+                                        </p>
+                                        <p id="verifyUserNameMsg"></p>
+                                        <br>
+                                        <p>密码：
+                                            <input type="password" name="password" id="password1" style="margin-left: 10px;" placeholder="请输入密码">
+                                        </p>
+
+                                        <!-- <p>
+                                            <input type="password" name="password" id="text1" style="margin-left: 50px;width: 140px;float: left;">
+                                            <input type="text" id="text2" value="获取验证码" style="width: 100px;float: left;margin-left: 10px;color: #464646;text-align: center;background: rgb(214, 212, 212);">
+                                        </p> -->
+
+                                        <li class="clfix">
+                                            <div class="getpassreg">
+                                                <a href="" class="getpass">找回密码</a>
+                                            </div>
+                                        </li>
+                                        <br>
+                                        <p>
+                                            <input type="button" value="注册" id="btnReg" class="login-btn" style="margin-top: 10px;" />
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- 登陆 -->
+                                <div id="login" style="display: none" class="box1">
+                                    <div>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <p>用户名：
+                                            <input type="text" name="username" id="username2" placeholder="请输入用户名">
+                                        </p>
+                                        <p id="verifyUserNameMsg"></p>
+                                        <br>
+                                        <p>密码：
+                                            <input type="password" name="password" id="password2" style="margin-left: 10px;" placeholder="请输入密码">
+                                        </p>
+                                        <br>
+                                        <p>
+                                            <input type="password" placeholder="验证码" name="password" id="text1" style="margin-left: 50px;width: 140px;float: left;">
+                                            <input type="text" id="text2" value="获取验证码" style="width: 100px;float: left;margin-left: 10px;color: #464646;text-align: center;background: rgb(214, 212, 212);">
+                                        </p>
+                                        <br>
+                                        <br>
+                                        <p>
+                                            <input type="button" value="登录" id="btnLogin" class="login-btn" style="margin-top: 10px;" />
+                                        </p>
+                                    </div>
+                                </div>
+                                <script>
+                                    var box = document.getElementById('J_login_panel');
+                                    var box1 = box.getElementsByClassName('box1');
+                                    var input1 = box.getElementsByTagName('a');
+                                    for (var i = 0; i < input1.length; i++) {
+                                        input1[i].index = i;
+                                        input1[i].onclick = function () {
+                                            for (var j = 0; j < box1.length; j++) {
+                                                input1[j].className = '';
+                                                box1[j].style.display = 'none';
+                                            }
+                                            this.className = 'active';
+                                            box1[this.index].style.display = 'block';
+                                        }
+                                    }
+
+
+                                </script>
+
+                            </ul>
+                        </div>
+                        <br>
+                        <div class="login-extinfo">
+                            <dl>
+                                <dt id="J_api_login_opt" class="optbar">
+                                    <span class="tit">合作网站账号登录</span>
+                                </dt>
+                                <dd id="J_api_login_box">
+                                    <ul class="api-login clfix">
+                                        <li>
+                                            <a href="" class="api-qq" title="QQ账号"></a>
+                                        </li>
+                                        <li>
+                                            <a href="" class="api-wechat" title="微信账号"></a>
+                                        </li>
+                                        <li>
+                                            <a href="" class="api-sina" title="新浪微博"></a>
+                                        </li>
+                                        <li>
+                                            <a href="" class="api-alipay" title="支付宝账号"></a>
+                                        </li>
+                                        <li class="last">
+                                            <a href="" class="api-pingan" title="平安万里通"></a>
+                                        </li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="login-xieyi">
+                            登录代表您已同意
+                            <a href="" target="_blank">《走秀网用户协议》</a>
+                        </div>
+                        <!--二维码扫码登陆入口 开始-->
+                        <a href="" class="login_codego"></a>
+                        <a href="" class="login_ewmg"></a>
+                        <!--二维码扫码登陆入口 结束-->
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 开始 -->
+    <!-- -->
+    <div id="footer_1" class="gw960 g-footer">
+        <div class="g-footer-xiu">
+            <a href="">关于走秀</a>
+            <b>|</b>
+            <a href="">媒体报道</a>
+            <b>|</b>
+            <a href="">品牌招商</a>
+            <b>|</b>
+            <a href="">加入走秀</a>
+            <b>|</b>
+            <a href="">友情链接</a>
+            <b>|</b>
+            <a href="">联系我们</a>
+            <b>|</b>
+            <a href="">帮助中心</a>
+            <b>|</b>
+            <a href="">网站地图</a>
+        </div>
+        <div class="g-footer-copyright">
+            Copyright © 2008-
+            <script>document.write(new Date().getFullYear());</script>2019
+            <a href="">Xiu.com</a> 版权所有 . 粤ICP备07502993号
+            <a href="" target="_blank">
+                <img src="../src/images/wab.png" width="14" height="14"> 粤公网安备 44030402000804号
+            </a>
+        </div>
+    </div>
+
+
+</body>
+<script>
+    var text1 = getid('text1');
+    var text2 = getid('text2');
+    var btn = getid('btn');
+    var right = getid('right');
+    text2.onclick = function () {
+        var res = Sui(5);
+        text2.value = res;
+    }
+</script>
+<script src="../js/login.js"></script>
+
+</html>

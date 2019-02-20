@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/carts.css" />
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/common.js"></script>
+    <!-- <script src="../js/cart.js"></script> -->
+    <script src="../js/car.js"></script>
+</head>
+<body>
+    <section class="content" style="width: 950px;">
+        <div class="s_header rela s_shoppingLine" style="background-image:none;">
+            <h1 class="s_logo" onclick="javascript:toXIUIndex();">
+                <a href="javascript:void(0);" title="走秀网 全球时尚 正品保证" class="rela">走秀网
+                    <b class="abso"></b>
+                </a>
+            </h1>
+            <div class="s_column abso">
+                <p class="s_mar">
+                    <a onclick="this.newWindow = window.open('http://v1.live800.com/live800/chatClient/chatbox.jsp?companyID=198389&amp;configID=40775&amp;jid=5811309589&amp;enterurl=' + encodeURIComponent(location.href), 'chatbox198389','toolbar=0,scrollbars=0,location=0,menubar=0,resizable=1,width=570,height=424');this.newWindow.focus();this.newWindow.opener=window;return false;"
+                        href="javascript:void(0)" target="_self" id="live800iconlink" title="在线客服">在线客服</a>
+                    <span>客服热线(免长途费)：
+                        <b>400-888-4499</b>
+                    </span>
+                </p>
+                <p>
+                    <span id="loginZone">您好!欢迎光临走秀网!
+                        <a href="../html/login.html" target="_blank" id="loginBtn" title="登录/注册">
+                        [ 登录/注册 ] </a>
+                    </span>
+                    |
+                    <a href="http://www.xiu.com/help/index.shtml" target="_blank" title="帮助"> 帮助中心 </a>
+                </p>
+            </div>
+        </div>
+        <div class="my_shoppingCart">
+                <div class="shop_list">
+                    <ul class="st_ul">
+                          <li class="sli_bg"><span class="sli_on"></span>1.我的购物袋</li>		
+                        <li><span class="sli_of"></span>2.填写并核对订单信息</li>
+                        <li><span class="sli_bg"></span>3.成功提交订单</li>
+                    </ul>
+                </div>
+            </div>
+
+        <section class="cartMain" style="padding: 0;">
+            <div class="cartMain_hd">
+                <ul class="order_lists cartTop">
+                    <li class="list_chk">
+                        <!--所有商品全选-->
+                        <input type="checkbox" id="all" class="whole_check" style="top: 5px;left: 12px;">
+                        <!-- <label for="all"></label> -->
+                        全选
+                    </li>
+                    <li class="list_con">商品</li>
+                    <!-- <li class="list_info">商品参数</li> -->
+                    <li class="list_price">购买价（元）</li>
+                    <li class="list_amount">数量</li>
+                    <li class="list_price">总价（元）</li>
+                    <!-- <li class="list_sum">金额</li> -->
+                    <li class="list_op">操作</li>
+                </ul>
+            </div>
+
+            <div class="cartBox">
+                <div class="order_content" id="order_content" >
+                    <!-- <ul class="order_lists">
+                        <li class="list_chk">
+                 <input type="checkbox" id="checkbox_2" class="son_check">
+                            <label for="checkbox_2" ></label>
+                        </li>
+                        <li class="list_con">
+                            <div class="list_img">
+                                <a href="javascript:;">
+                                    <img src="../src/images/1.png" alt="">
+                                </a>
+                            </div>
+                            <div class="list_text">
+                                <a href="">pinpai</a>
+                                <a href="javascript:;">夏季男士迷彩无袖T恤圆领潮流韩版修身男装背心青年时尚打底衫男</a>
+                                <a href="">
+                                    <span>颜色：</span>
+                                    <span>尺码：</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="list_price">
+                            <p class="price">￥980</p>
+                        </li>
+                        <li class="list_amount">
+                            <div class="amount_box">
+                                <a href="javascript:;" class="reduce reSty" >-</a>
+                                <input type="text" value="1" class="sum">
+                                <a href="javascript:;" class="plus">+</a>
+                            </div>
+                        </li>
+                        <li class="list_sum">
+                            <p class="sum_price">￥980</p>
+                        </li>
+                        <li class="list_op">
+                            <p class="del">
+                                <a href="javascript:;" class="delBtn">移入收藏夹</a>
+                                <a href="javascript:;" class="delBtn_delete">删除</a>
+                            </p>
+                        </li>
+                    </ul>
+                    -->
+                </div>
+            </div>
+<script>
+   
+
+</script>
+           
+            <!--底部-->
+            <div class="bar-wrapper">
+                <div class="bar-right">
+                    <div class="piece">已选商品
+                        <strong class="piece_num">0</strong>件</div>
+                    <div class="totalMoney">共计:
+                        <strong class="total_text">￥0.00</strong>
+                    </div>
+                    <div class="calBtn">
+                        <a href="javascript:;">结算</a>
+                    </div>
+                </div>
+            </div>
+            <script>
+            	
+	//4.选中单行
+	$('#order_content').on('click','.son_check',function() {
+//		console.log($(this).prop('checked'));
+		NumPrice();
+    });
+    $('#all').on('click',function() {
+		if($(this).prop('checked')) {
+			//给所有的复选框都勾上
+			$('.son_check').prop('checked','checked');
+		}else{
+			$('.son_check').removeAttr('checked');
+		}
+		NumPrice();
+	});
+	//总数量和总价
+	var arr = [];//存被选中的行的下标数
+	function NumPrice() {
+		arr = [];
+		for(var i = 0; i < $('.son_check').size(); i++) {
+			if($('.son_check').eq(i).prop('checked')) {
+				arr.push(i);
+			}
+		}
+		
+		if(arr.length == $('.son_check').size()) {
+			//所有商品被选中了，控制权限勾上
+			$('.list_chk').prop('checked','checked');
+		}else{
+			$('.list_chk').removeAttr('checked');
+		}
+//		console.log(arr);
+		
+		var priceAll = 0;//总价
+		var numAll = 0;//总数量
+		
+		for(var i = 0; i < arr.length; i++) {
+			numAll += $('.sum').eq(arr[i]).val() * 1;
+			priceAll += $('.price13').eq(arr[i]).text() * 1;
+		}
+		// console.log($('pri').ht;
+//		console.log(numAll);
+//		console.log(priceAll);
+		$('.piece_num').html(numAll);
+        $('.total_text').html('￥' + priceAll);
+        var calBtn = $('.calBtn a');
+        if(priceAll!=0 && numAll!=0){
+            if(!calBtn.hasClass('btn_sty')){
+                calBtn.addClass('btn_sty');
+            }
+        }else{
+            if(calBtn.hasClass('btn_sty')){
+                calBtn.removeClass('btn_sty');
+            }
+        }
+	}
+            </script>
+        </section>
+        <section class="model_bg"></section>
+        <section class="my_model">
+            <p class="title">删除宝贝
+                <span class="closeModel">X</span>
+            </p>
+            <p>您确认要删除该宝贝吗？</p>
+            <div class="opBtn">
+                <a href="javascript:;" class="dialog-sure">确定</a>
+                <a href="javascript:;" class="dialog-close">关闭</a>
+            </div>
+        </section>
+        <div class="set_far">
+            <h2 style="float:left;">
+                <a class="on out" href="javascript:void(0);" id="showModle" onclick="showModle();" hidefocus="true" style="outline:none">看看您收藏的商品
+                    <b></b>
+                </a>
+            </h2>
+            <h2 style="float:left;margin-left:80px;padding-top:5px;">
+                请
+                <a class="red" href="login.html" style="color:#FF6633;" id="loginDiv" onclick="interestLogin(this);XIU.Window.ctraceClick('type=pop|bus=viewinterest' ,'trade');return false;">登录</a>后查看您收藏的商品
+            </h2>
+            <div style="clear:both;"></div>
+            <div class="tab_show">
+                <div style="display: block;" id="showModle_2">
+                </div>
+            </div>
+        </div>
+        <div class="M_shopping">
+            <p>Copyright © 2008-
+                <script>document.write(new Date().getFullYear());</script>2019
+                <a href="http://www.xiu.com/">Xiu.com</a> 版权所有 .
+                <a href="http://www.miibeian.gov.cn/">粤ICP备07502993号</a>
+                <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030402000804" target="_blank">
+                    <img src="http://www.xiustatic.com/static/img/footer/wab.png" width="16" height="16" style="margin: -4px 0px 0 0;"> 粤公网安备 44030402000804号
+                </a>
+            </p>
+            <p></p>
+            <p> </p>
+        </div>
+    </section>
+</body>
+
+</html>
